@@ -1,4 +1,15 @@
-
 <head>
-  <title>Title</title>
+    <title>Leaderboard</title>
 </head>
+
+<body>
+    <h1>Leaderboard</h1>
+    {{> leaderboard}}
+</body>
+
+<template name="leaderboard">
+  {{#each player}}
+    <li class="player {{selectedClass}}">{{name}}: {{score}}</li>
+  {{/each}}
+</template>
+
